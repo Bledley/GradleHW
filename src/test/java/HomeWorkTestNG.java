@@ -1,5 +1,6 @@
 import Pages.HomePage;
 import Pages.RegPage;
+import Util.Constants;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -11,60 +12,44 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
+import static Util.Constants.pass;
+
 public class HomeWorkTestNG {
-    //private WebDriver driver;
     protected RegPage regPage;
     protected HomePage homePage;
     private WebDriver chromeDriver;
     private WebDriver ffDriver;
+    protected Constants constants;
 
 
 
-    public WebDriver getDriver(String browser){
+    public WebDriver getDriver(String browser) {
         if (browser.equalsIgnoreCase("firefox")) {
 
-            if (ffDriver == null){
+            if (ffDriver == null) {
                 System.setProperty("webdriver.gecko.driver", "/Users/artem/IdeaProjects/Third_lesson_java/sources/geckodriver");
                 ffDriver = new FirefoxDriver();
                 ffDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             }
             return ffDriver;
         } else if (browser.equalsIgnoreCase("chrome")) {
-            if (chromeDriver == null){
+            if (chromeDriver == null) {
                 System.setProperty("webdriver.chrome.driver", "/Users/artem/IdeaProjects/Third_lesson_java/sources/chromedriver");
                 chromeDriver = new ChromeDriver();
                 chromeDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             }
             return chromeDriver;
-        } else return null; //{
-//            if (chromeDriver == null){
-//                System.setProperty("webdriver.chrome.driver", "/Users/artem/IdeaProjects/Third_lesson_java/sources/chromedriver");
-//                chromeDriver = new ChromeDriver();
-//            }
-//            return chromeDriver;
-//        }
+        } else return null;
     }
 
-    String URL = "https://www.facebook.com/";
-    String name = "Johny";
-    String surname = "Depp";
-    String pass = "Qweasd123";
+
 
 
 
     @Parameters("browser")
     @BeforeTest
     public void setUp (String browser) {
-//        if (browser.equalsIgnoreCase("firefox")) {
-//            System.setProperty("webdriver.gecko.driver", "/Users/artem/IdeaProjects/Third_lesson_java/sources/geckodriver");
-//            driver = new FirefoxDriver();
-//        } else if (browser.equalsIgnoreCase("chrome")) {
-//            System.setProperty("webdriver.chrome.driver", "/Users/artem/IdeaProjects/Third_lesson_java/sources/chromedriver");
-//            driver = new ChromeDriver();
-        // }
-
-        getDriver(browser).get(URL);
-        //Thread.sleep(5000);
+        getDriver(browser).get(constants.URL);
     }
 
 
@@ -82,11 +67,11 @@ public class HomeWorkTestNG {
     @Test(priority = 2)
     public void enterAllRegData(String browser) {
         regPage = new RegPage(getDriver(browser)); //lazy initalization
-        regPage.firstNameFld.sendKeys(name);
-        regPage.lastNameFld.sendKeys(surname);
+        regPage.firstNameFld.sendKeys(constants.name);
+        regPage.lastNameFld.sendKeys(constants.surname);
         regPage.emailFld.sendKeys(regPage.generatedMail);
         regPage.repeatEmailFld.sendKeys(regPage.generatedMail);
-        regPage.passFld.sendKeys(pass);
+        regPage.passFld.sendKeys(constants.pass);
         regPage.selectBirthdayYear();
         regPage.maleRadioBtn.click();
 
@@ -95,8 +80,8 @@ public class HomeWorkTestNG {
     @Parameters("browser")
     @Test(priority = 3)
     public void checkEnteredData() {
-        Assert.assertEquals(regPage.firstNameFld.getAttribute("value"), name);
-        Assert.assertEquals(regPage.lastNameFld.getAttribute("value"), surname);
+        Assert.assertEquals(regPage.firstNameFld.getAttribute("value"), constants.name);
+        Assert.assertEquals(regPage.lastNameFld.getAttribute("value"), constants.surname);
         Assert.assertEquals(regPage.emailFld.getAttribute("value"), regPage.generatedMail);
         Assert.assertEquals(regPage.repeatEmailFld.getAttribute("value"), regPage.generatedMail);
         Assert.assertEquals(regPage.passFld.getAttribute("value"), pass);
