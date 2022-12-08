@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HomeWorkTestNG" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-12-07T13:56:05" hostname="Artem.lan" time="7.901">
+  <properties/>
+  <testcase name="openRegPage[0](chrome)" classname="HomeWorkTestNG" time="6.155"/>
+  <testcase name="enterAllRegData[0](chrome)" classname="HomeWorkTestNG" time="0.597"/>
+  <testcase name="checkEnteredData" classname="HomeWorkTestNG" time="0.113"/>
+  <testcase name="checkRegisterBtn" classname="HomeWorkTestNG" time="0.014"/>
+  <testcase name="openRegPage[0](firefox)" classname="HomeWorkTestNG" time="6.264"/>
+  <testcase name="enterAllRegData[0](firefox)" classname="HomeWorkTestNG" time="0.67"/>
+  <testcase name="checkEnteredData" classname="HomeWorkTestNG" time="0.094"/>
+  <testcase name="checkRegisterBtn" classname="HomeWorkTestNG" time="0.016"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3iX3c4/ye/l/en_GB/LHUxA4o6J25.js?_nc_x=Ij3Wp8lg5Kz, line 21: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.facebook.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.facebook.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.facebook.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.facebook.com"
+]]></system-err>
+</testsuite>

@@ -1,0 +1,6 @@
+Pages/HomePage.java
+ Pages.HomePage
+Pages/BasePage.java
+ Pages.BasePage
+Pages/RegPage.java
+ Pages.RegPage

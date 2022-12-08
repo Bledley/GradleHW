@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-07T15:55:55 EET" name="Parallel suite" finished-at="2022-12-07T15:56:14 EET" duration-ms="18268">
+    <groups>
+    </groups>
+    <test started-at="2022-12-07T15:55:55 EET" name="Firefox test" finished-at="2022-12-07T15:56:14 EET" duration-ms="18268">
+      <class name="HomeWorkTestNG">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:HomeWorkTestNG@4e394fdb]" started-at="2022-12-07T15:55:55 EET" name="setUp" finished-at="2022-12-07T15:56:06 EET" duration-ms="10641" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="openRegPage(java.lang.String)[pri:1, instance:HomeWorkTestNG@4e394fdb]" started-at="2022-12-07T15:56:06 EET" name="openRegPage" finished-at="2022-12-07T15:56:12 EET" duration-ms="6264" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openRegPage -->
+        <test-method signature="enterAllRegData(java.lang.String)[pri:2, instance:HomeWorkTestNG@4e394fdb]" started-at="2022-12-07T15:56:12 EET" name="enterAllRegData" finished-at="2022-12-07T15:56:13 EET" duration-ms="670" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterAllRegData -->
+        <test-method signature="checkEnteredData()[pri:3, instance:HomeWorkTestNG@4e394fdb]" started-at="2022-12-07T15:56:13 EET" name="checkEnteredData" finished-at="2022-12-07T15:56:13 EET" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEnteredData -->
+        <test-method signature="checkRegisterBtn()[pri:4, instance:HomeWorkTestNG@4e394fdb]" started-at="2022-12-07T15:56:13 EET" name="checkRegisterBtn" finished-at="2022-12-07T15:56:13 EET" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkRegisterBtn -->
+        <test-method is-config="true" signature="closeBrowser(java.lang.String)[pri:0, instance:HomeWorkTestNG@4e394fdb]" started-at="2022-12-07T15:56:13 EET" name="closeBrowser" finished-at="2022-12-07T15:56:14 EET" duration-ms="576" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- HomeWorkTestNG -->
+    </test> <!-- Firefox test -->
+  </suite> <!-- Parallel suite -->
+</testng-results>

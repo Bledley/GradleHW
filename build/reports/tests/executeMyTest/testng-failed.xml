@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Parallel suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" parallel="tests" name="Firefox test(failed)" verbose="0">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="HomeWorkTestNG">
+        <methods>
+          <include name="enterAllRegData" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
+          <include name="checkEnteredData"/>
+          <include name="setUp"/>
+          <include name="checkRegisterBtn"/>
+        </methods>
+      </class> <!-- HomeWorkTestNG -->
+    </classes>
+  </test> <!-- Firefox test(failed) -->
+  <test thread-count="5" parallel="tests" name="Chrome test(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="HomeWorkTestNG">
+        <methods>
+          <include name="enterAllRegData" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
+          <include name="checkEnteredData"/>
+          <include name="setUp"/>
+          <include name="checkRegisterBtn"/>
+        </methods>
+      </class> <!-- HomeWorkTestNG -->
+    </classes>
+  </test> <!-- Chrome test(failed) -->
+</suite> <!-- Failed suite [Parallel suite] -->
